@@ -1,0 +1,17 @@
+.dash-nav{
+    margin: 3px;
+    padding: 0px 4px;
+    border: 2px solid black;
+    font-weight: 700;
+    background-color: blanchedalmond;
+    text-decoration: none;
+    transition: 0.3s;
+    color: black;
+
+}
+.dash-nav:hover{
+   
+    background-color: rgb(8, 8, 8);
+    color: blanchedalmond;
+
+}

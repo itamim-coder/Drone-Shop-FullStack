@@ -1,0 +1,25 @@
+.nav-btn{
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: rgb(190, 233, 71);
+    font-weight: 700;
+    transition: 0.3s;
+
+}
+.nav-btn:hover{
+    border: 2px solid yellow;
+    border-radius: 25px;
+}
+.log-nav{
+    background-color: transparent;
+    border: 2px solid yellow;
+    border-radius: 25px;
+    color: rgb(231, 202, 202);
+    font-weight: 700;
+    transition: 0.3s;
+
+}
+.log-nav:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 10, 10);
+}

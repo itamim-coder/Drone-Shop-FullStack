@@ -21,6 +21,8 @@ import CreateAdmin from './pages/Dashboard/CreateAdmin/CreateAdmin';
 import AddProduct from './pages/Dashboard/AddProduct/AddProduct';
 import ManageOrder from './pages/ManageOrder/ManageOrder';
 import ManageProducts from './pages/Dashboard/ManageProducts/ManageProducts';
+import Footer from './pages/Shared/Navigation/Footer/Footer';
+import Pay from './pages/Dashboard/Pay/Pay';
 
 
 function App() {
@@ -40,6 +42,9 @@ function App() {
          </Route>
          <PrivateRoute exact path="/dashboard">
            <Dashboard></Dashboard>
+         </PrivateRoute>
+         <PrivateRoute exact path="/pay">
+           <Pay></Pay>
          </PrivateRoute>
          <PrivateRoute exact path="/myorder">
            <MyOrder></MyOrder>
@@ -69,6 +74,7 @@ function App() {
           <Register></Register>
          </Route>
        </Switch>
+       
      </Router>
     </AuthProvider>
     </div>

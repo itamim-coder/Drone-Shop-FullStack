@@ -15,10 +15,13 @@ const Banner = () => {
       src={banner1}
       alt="First slide"
     />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+   
+   <Carousel.Caption className="mb-5">
+      <h1 class="text-dark" ><i>The Worlds Smallest Quadcopter</i></h1>
+      <h1 class="text-dark">WELCOME TO <span class="text-warning">Drone-Shop</span> </h1>
+      <h5 class="text-dark">Parlo provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete.</h5>
     </Carousel.Caption>
+   
   </Carousel.Item>
   <Carousel.Item>
     <img
@@ -27,9 +30,10 @@ const Banner = () => {
       alt="Second slide"
     />
 
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<Carousel.Caption className="mb-5">
+      <h1 class="text-dark" ><i>The Worlds Smallest Quadcopter</i></h1>
+      <h1 class="text-dark">WELCOME TO <span class="text-warning">Drone-Shop</span> </h1>
+      <h5 class="text-dark">Parlo provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete.</h5>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -39,9 +43,10 @@ const Banner = () => {
       alt="Third slide"
     />
 
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+<Carousel.Caption className="mb-5">
+      <h1 class="text-dark" ><i>The Worlds Smallest Quadcopter</i></h1>
+      <h1 class="text-dark">WELCOME TO <span class="text-warning">Drone-Shop</span> </h1>
+      <h5 class="text-dark">Parlo provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete.</h5>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

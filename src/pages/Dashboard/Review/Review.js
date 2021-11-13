@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import useAuth from '../../../hooks/useAuth';
 import DashNav from '../DashNav/DashNav';
@@ -7,12 +7,13 @@ import './Review.css'
 
 const Review = () => {
     const { register, handleSubmit } = useForm();
+    const [success, setSuccess] = useState(false);
 
     const {user} = useAuth();
 
     const onSubmit = data =>{
         console.log(data)
-        fetch('http://localhost:5000/reviews',{
+        fetch('https://stormy-woodland-20048.herokuapp.com/reviews',{
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(data),            
@@ -20,12 +21,13 @@ const Review = () => {
         .then( res => res.json())
         .then(result => console.log(result))
         console.log(data);
+        
 
     }
     
 
     // useEffect(()=>{
-    //     fetch('http://localhost:5000/allreview')
+    //     fetch('https://stormy-woodland-20048.herokuapp.com/allreview')
     // },[]))
     return (
         <div>
@@ -41,6 +43,11 @@ const Review = () => {
 
 <input  type="submit" />
             </form>
+            { !success &&  
+<div class="w-50 alert alert-success alert-dismissible fade show">
+        <strong>Success!</strong>  Review Added Successfully
+  </div>  
+}
         </div>
     );
 };

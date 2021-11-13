@@ -10,14 +10,14 @@ const ManageProducts = () => {
     const [control , setControl] = useState(false)
 
     useEffect(()=>{
-        fetch("http://localhost:5000/products")
+        fetch("https://stormy-woodland-20048.herokuapp.com/products")
         .then(res => res.json())
         .then(data => setProducts(data))
     },[control])    
 
     const handleDelete = (id) =>{
         alert("are you sure?");
-        fetch(`http://localhost:5000/products/${id}`,{
+        fetch(`https://stormy-woodland-20048.herokuapp.com/products/${id}`,{
            method: "DELETE", 
         })
         .then(res => res.json())

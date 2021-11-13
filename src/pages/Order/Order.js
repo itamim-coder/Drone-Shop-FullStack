@@ -21,7 +21,7 @@ const Order = () => {
         data.productName = product;
         data.status = "pending"
 
-        fetch("http://localhost:5000/confirmOrder",{
+        fetch("https://stormy-woodland-20048.herokuapp.com/confirmOrder",{
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(data),            
@@ -34,7 +34,7 @@ const Order = () => {
    
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/singleproduct/${productId}`)
+        fetch(`https://stormy-woodland-20048.herokuapp.com/singleproduct/${productId}`)
         .then(res => res.json())
         .then(data => setSingleProduct(data))
     },[])

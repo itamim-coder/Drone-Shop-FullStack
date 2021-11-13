@@ -12,14 +12,14 @@ const MyOrder = () => {
     const [control , setControl] = useState(false)
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/myorder/${userEmail}`)
+        fetch(`https://stormy-woodland-20048.herokuapp.com/myorder/${userEmail}`)
         .then(res => res.json())
         .then(data => setUserOrder(data))
     },[control])    
 
     const handleDelete = (id) =>{
         alert("are you sure?");
-        fetch(`http://localhost:5000/cancelorder/${id}`,{
+        fetch(`https://stormy-woodland-20048.herokuapp.com/cancelorder/${id}`,{
            method: "DELETE", 
         })
         .then(res => res.json())

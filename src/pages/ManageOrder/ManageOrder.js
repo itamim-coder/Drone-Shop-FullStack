@@ -17,7 +17,7 @@ const ManageOrder = () => {
     const [control , setControl] = useState(false)
 
     useEffect(()=>{
-        fetch("http://localhost:5000/confirmOrder")
+        fetch("https://stormy-woodland-20048.herokuapp.com/confirmOrder")
         .then(res => res.json())
         .then(data => setOrdersStatus(data))
     },[])    
@@ -30,7 +30,7 @@ const ManageOrder = () => {
     const onSubmit = (data , e) => {
        
         console.log(data)
-        fetch(`http://localhost:5000/status/${orderId}`, {
+        fetch(`https://stormy-woodland-20048.herokuapp.com/status/${orderId}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -76,7 +76,7 @@ const ManageOrder = () => {
       </select>
       <input type="submit" />
     </form> </td>
-                   <button  onClick={()=>handleStatus(order?._id)} >Delete Product</button> <td/>
+                   <button  onClick={()=>handleStatus(order?._id)} >Done</button> <td/>
                 </tr>
             </tbody>
         </table>

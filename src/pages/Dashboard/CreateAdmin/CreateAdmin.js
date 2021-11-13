@@ -18,7 +18,7 @@ const CreateAdmin = () => {
     // }
     const onSubmit = data => {
       
-       fetch("http://localhost:5000/users",{
+       fetch("https://stormy-woodland-20048.herokuapp.com/users",{
         method: "PUT",
         headers: {"content-type": "application/json"},
         body: JSON.stringify(data),            
