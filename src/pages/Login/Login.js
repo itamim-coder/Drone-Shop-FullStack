@@ -54,7 +54,7 @@ const Login = () => {
   </Form.Group>
  
   <Button variant="primary" type="submit" className="mb-3">
-    Submit
+    Login
   </Button> 
   <br />
   <NavLink to="/register">

@@ -76,7 +76,7 @@ const Register = () => {
   </Form.Group>
  
   <Button variant="primary" type="submit" className="mb-3">
-    Submit
+    Register
   </Button> 
   <br />
   al Readey registered ? please

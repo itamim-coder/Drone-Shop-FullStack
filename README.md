@@ -1,10 +1,14 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Site Name :Drone Shop [Drone Shop](https://drone-shop-a4d7f.web.app/).
 
 ## Available Scripts
 
-In the project directory, you can run:
+⚫FullStack Website.\
+⚫Email and Pass Login /registration Authentication.\
+⚫user Can order And Watch his Order product and Cancel.\
+⚫Admin Role AvailAble.\
+⚫Any Admin Can shipped access product status, add product, make admin, manage all product.\
 
 ### `npm start`
 
