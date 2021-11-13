@@ -1,0 +1,10 @@
+.product-div{
+    background-color: rgb(38, 202, 202);
+    height: 100%;
+    width: 80%;
+    border: 1px solid black;
+}
+
+.product-div img{
+    width: 100%;
+}
