@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './product.css'
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 const Product = ({ product }) => {
+  useEffect(()=>{
+    Aos.init({duration: 2000});
+},[]);
  
     const { _id ,name , price , description, image } = product;
     return (
       
-        <div className="product-div mt-5">
+        <div  data-aos="fade-up" className="product-div mt-5">
             <img src={image} alt="" />
           <div className="m-2  product">
           

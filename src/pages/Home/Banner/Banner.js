@@ -16,7 +16,7 @@ const Banner = () => {
       alt="First slide"
     />
    
-   <Carousel.Caption className="mb-5">
+   <Carousel.Caption className="mb-5 b1">
       <h1 class="text-dark" ><i>The Worlds Smallest Quadcopter</i></h1>
       <h1 class="text-dark">WELCOME TO <span class="text-warning">Drone-Shop</span> </h1>
       <h5 class="text-dark">Parlo provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete.</h5>
@@ -30,7 +30,7 @@ const Banner = () => {
       alt="Second slide"
     />
 
-<Carousel.Caption className="mb-5">
+<Carousel.Caption className="mb-5 b1">
       <h1 class="text-dark" ><i>The Worlds Smallest Quadcopter</i></h1>
       <h1 class="text-dark">WELCOME TO <span class="text-warning">Drone-Shop</span> </h1>
       <h5 class="text-dark">Parlo provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete.</h5>
@@ -43,7 +43,7 @@ const Banner = () => {
       alt="Third slide"
     />
 
-<Carousel.Caption className="mb-5">
+<Carousel.Caption className="mb-5 b1">
       <h1 class="text-dark" ><i>The Worlds Smallest Quadcopter</i></h1>
       <h1 class="text-dark">WELCOME TO <span class="text-warning">Drone-Shop</span> </h1>
       <h5 class="text-dark">Parlo provide how all this mistaken idea of denouncing pleasure and sing pain was born an will give you a complete.</h5>
