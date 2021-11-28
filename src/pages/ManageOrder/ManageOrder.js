@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 
 import DashNav from '../Dashboard/DashNav/DashNav';
+import './ManageOrder.css'
 
 
 const ManageOrder = () => {
@@ -44,48 +45,92 @@ const ManageOrder = () => {
     return (
         <div>
         <DashNav></DashNav>
-        <div>
-            <div>
+        <div className="text-center  container">
+     <Table  striped bordered>
+   
+     <thead>
+<tr >
+                <th className="m-3">Product Name</th>
+                <th>Products image</th>
+                <th>Unit Price</th>
+              
+                <th>Active Status</th>
+                <th>Action</th>
+            </tr>
+</thead>
                 {ordersStatus.map(order =>(
-                    <div>
-                       <table>
-            < thead>
-            <tr >
+                 
+                     
+                     <tbody>
+   <tr>
+    <td> {order?.productName}  </td>       
+    <td> <img className="order-product" src={order.image} alt="" />  </td>       
+     <td> {order?.price} </td>
+       <td>  
+<form onSubmit={handleSubmit(onSubmit)}>      
+<select
+onClick={()=>handleStatus(order?._id)} 
+{...register("status")}>
+
+
+<option value="pending">Pending</option>
+<option value="shipped">Shipped</option>
+
+</select>
+<input  className="green-btn m-2" type="submit" />
+</form> </td>
+     <td> <button className="green-btn"  onClick={()=>handleStatus(order?._id)} >Done</button> </td>
+   </tr>
+</tbody>
+       
+                    
+                 ))}
+           
+     </Table>
+     </div>
+       
+
+
+
+              
+              {/* <Table striped bordered>
+<thead>
+<tr >
                 <th className="m-3">Product Name</th>
                 
                 <th>Unit Price</th>
                 <th>Active Status</th>
                 <th>Action</th>
             </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  {order?.productName}  <td/>
-                    
-                   {order?.price} <td/>
-                    <td>  
-             <form onSubmit={handleSubmit(onSubmit)}>      
-      <select
-      onClick={()=>handleStatus(order?._id)} 
-      {...register("status")}>
-       
-       
-        <option value="pending">Pending</option>
-        <option value="shipped">Shipped</option>
-       
-      </select>
-      <input type="submit" />
-    </form> </td>
-                   <button  onClick={()=>handleStatus(order?._id)} >Done</button> <td/>
-                </tr>
-            </tbody>
-        </table>
-                    </div>
+</thead>
+{ordersStatus.map(order  =>(
+   <tbody>
+   <tr>
+     {order?.productName}  <td/>       
+      {order?.price} <td/>
+       <td>  
+<form onSubmit={handleSubmit(onSubmit)}>      
+<select
+onClick={()=>handleStatus(order?._id)} 
+{...register("status")}>
 
-                 ))}
-            </div>
-        </div>
-    </div>
+
+<option value="pending">Pending</option>
+<option value="shipped">Shipped</option>
+
+</select>
+<input type="submit" />
+</form> </td>
+      <button  onClick={()=>handleStatus(order?._id)} >Done</button> <td/>
+   </tr>
+</tbody>
+))}
+
+</Table> */}
+
+
+</div>
+    
     
 );
 

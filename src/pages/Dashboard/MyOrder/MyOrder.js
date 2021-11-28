@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 
 import useAuth from '../../../hooks/useAuth'
 import DashNav from '../DashNav/DashNav';
+import './MyOrder.css'
 
 
 const MyOrder = () => { 
@@ -35,37 +37,40 @@ console.log(id)
     return (
         <div>
             <DashNav></DashNav>
-            <div>
-                <div>
-                    {userOrder.map(order =>(
-                        <div>
-                           <table>
-                <thead>
-                <tr >
-                    <th className="m-3">Product Name</th>
-                    
-                    <th>Unit Price</th>
-                    <th>Active Status</th>
-                    <th>Action</th>
-                   
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      {order?.productName}  <td/>
-                        
-                       {order?.price} <td/>
-                       {order?.status} <td/>
-
-                       <button onClick={()=>handleDelete(order?._id)} >Cancel Order</button> <td/>
-                    </tr>
-                </tbody>
-            </table>
-                        </div>
-
-                     ))}
-                </div>
-            </div>
+            <div className="text-center  container">
+              
+                            <Table striped bordered>
+  <thead>
+    <tr>
+      
+      <th>#</th>
+      <th>Product  Name</th>
+      <th>Product  Name</th>
+      <th>Unit Price </th>
+      <th>Order Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  {userOrder.map((order, index) =>(
+  <tbody>
+      
+    <tr>
+        
+      <td>{index}</td>
+      <td>{order?.productName}</td>
+      <td> <img className="order-product" src={order?.image} alt="" /></td>
+      <td>{order?.price}</td>
+      <td> {order?.status}</td>
+      <td> <button className="cancel-btn" onClick={()=>handleDelete(order?._id)} >Cancel Order</button></td>
+    </tr>
+   
+   
+  </tbody>
+   ))}
+  
+</Table>
+         
+        </div>
         </div>
         
     );

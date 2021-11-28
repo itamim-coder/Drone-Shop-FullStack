@@ -14,11 +14,13 @@ const Order = () => {
     const email = user.email;
     const price = singleProduct?.price;
     const product = singleProduct?.name;
+    const image = singleProduct?.image;
 
     const onSubmit = data => {
         data.email = email;
         data.price = price;
         data.productName = product;
+        data.image = image;
         data.status = "pending"
 
         fetch("https://stormy-woodland-20048.herokuapp.com/confirmOrder",{

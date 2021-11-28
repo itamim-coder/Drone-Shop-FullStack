@@ -1,0 +1,11 @@
+.order-product{
+    width: 5em;   
+  
+}
+.cancel-btn{
+    background-color: red;
+    padding: 5px;
+    border: 0px;
+    color: white;
+    font-weight: 700;
+}

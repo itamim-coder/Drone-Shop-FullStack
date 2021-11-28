@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import DashNav from '../DashNav/DashNav';
+import { Table } from 'react-bootstrap';
 
 const ManageProducts = () => {
     const {user} = useAuth();
@@ -33,33 +34,46 @@ console.log(id)
         <div>
         <DashNav></DashNav>
         <div>
-            <div>
-                {products.map(product =>(
-                    <div>
-                       <table>
-            <thead>
-            <tr >
-                <th className="m-3">Product Name</th>
-                
-                <th>Unit Price</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  {product?.name}  <td/>
-                    
-                   {product?.price} <td/>
-                   <button onClick={()=>handleDelete(product?._id)} >Delete Product</button> <td/>
-                </tr>
-            </tbody>
-        </table>
-                    </div>
+           
+    
+            <div className="text-center  container">
+              
+              <Table striped bordered>
+<thead>
+<tr>
 
-                 ))}
-            </div>
-        </div>
-    </div>
+
+<th>Product  Name</th>
+<th>Product  Name</th>
+<th>Unit Price </th>
+
+<th>Action</th>
+</tr>
+</thead>
+{products.map(product  =>(
+<tbody>
+
+<tr>
+
+
+<td>{product?.name}</td>
+<td> <img className="order-product" src={product.image} alt="" /></td>
+<td>{product?.price}</td>
+
+<td>   <button className="cancel-btn" onClick={()=>handleDelete(product?._id)} >Delete Product</button></td>
+</tr>
+
+
+</tbody>
+))}
+
+</Table>
+
+
+</div>
+</div>
+</div>
+              
     
 );
 
