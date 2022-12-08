@@ -13,6 +13,8 @@
 .log-nav{
     background-color: transparent;
     border: 2px solid yellow;
+    padding-inline: 20px;
+    padding-block: 5px;
     border-radius: 25px;
     color: rgb(231, 202, 202);
     font-weight: 700;

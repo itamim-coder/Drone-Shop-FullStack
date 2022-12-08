@@ -18,7 +18,7 @@ const ManageOrder = () => {
     const [control , setControl] = useState(false)
 
     useEffect(()=>{
-        fetch("https://stormy-woodland-20048.herokuapp.com/confirmOrder")
+        fetch("https://drone-shop.onrender.com/confirmOrder")
         .then(res => res.json())
         .then(data => setOrdersStatus(data))
     },[])    
@@ -31,7 +31,7 @@ const ManageOrder = () => {
     const onSubmit = (data , e) => {
        
         console.log(data)
-        fetch(`https://stormy-woodland-20048.herokuapp.com/status/${orderId}`, {
+        fetch(`https://drone-shop.onrender.com/status/${orderId}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

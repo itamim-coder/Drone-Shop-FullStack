@@ -23,7 +23,7 @@ const Order = () => {
         data.image = image;
         data.status = "pending"
 
-        fetch("https://stormy-woodland-20048.herokuapp.com/confirmOrder",{
+        fetch("https://drone-shop.onrender.com/confirmOrder",{
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(data),            
@@ -36,7 +36,7 @@ const Order = () => {
    
 
     useEffect(()=>{
-        fetch(`https://stormy-woodland-20048.herokuapp.com/singleproduct/${productId}`)
+        fetch(`https://drone-shop.onrender.com/singleproduct/${productId}`)
         .then(res => res.json())
         .then(data => setSingleProduct(data))
     },[])
